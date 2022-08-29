@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PasswordGenerator.Model
 {
-    class Class1
+    public class MainModel
     {
+        int x = 0;
     }
 }
