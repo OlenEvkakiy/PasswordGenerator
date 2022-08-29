@@ -8,7 +8,6 @@ namespace PasswordGenerator.Model
 {
     public class MainModel
     {
-        int x = 0;
-        int y;
+        
     }
 }

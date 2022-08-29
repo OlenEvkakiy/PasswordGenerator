@@ -1,12 +1,72 @@
-﻿<Window x:Class="PasswordGenerator.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PasswordGenerator"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+﻿<Window
+    x:Class="PasswordGenerator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PasswordGenerator"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <StackPanel>
+        <TextBlock
+            HorizontalAlignment="Center"
+            FontSize="25"
+            Text="Введите название сайта" />
+        <TextBox
+            Width="250"
+            Height="25"
+            HorizontalAlignment="Center"
+            FontSize="15"
+            TextAlignment="Center" />
+        <TextBlock
+            HorizontalAlignment="Center"
+            FontSize="25"
+            Text="Количесвто символов в блоке" />
+        <TextBox
+            Width="250"
+            Height="25"
+            HorizontalAlignment="Center"
+            FontSize="15"
+            TextAlignment="Center" />
+        <TextBlock
+            HorizontalAlignment="Center"
+            FontSize="25"
+            Text="Количесвто блоков" />
+        <TextBox
+            Width="250"
+            Height="25"
+            HorizontalAlignment="Center"
+            FontSize="15"
+            TextAlignment="Center" />
+        <Button
+            Width="100"
+            Height="30"
+            Background="#f0f0f0"
+            Content="Go"
+            FontSize="15"
+            FontWeight="Bold" />
+        <TextBlock
+            HorizontalAlignment="Center"
+            FontSize="25"
+            FontWeight="Bold"
+            Text="Результат:" />
+        <TextBlock
+            HorizontalAlignment="Center"
+            FontSize="25"
+            Text="Bla" />
+        <TextBlock
+            HorizontalAlignment="Left"
+            FontSize="15"
+            FontWeight="Bold"
+            Text="Использовать название сайта в пароле?" />
+        <Viewbox Height="20" HorizontalAlignment="Left">
+            <RadioButton Content="Да" />
+        </Viewbox>
+        <Viewbox Height="20" HorizontalAlignment="Left">
+            <RadioButton Content="Нет" />
+        </Viewbox>
 
-    </Grid>
+    </StackPanel>
 </Window>
