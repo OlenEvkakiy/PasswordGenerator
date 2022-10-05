@@ -30,11 +30,11 @@ namespace PasswordGenerator.Model
             
         }
 
-        string BAZA()
-        {
-            WebSiteName = changeWebSiteName.Converter(WebSiteName);
-            RandomFillingOfBlocks = new string[NumberOfBlocks];
-        }
+        //string BAZA()
+        //{
+        //    WebSiteName = changeWebSiteName.Converter(WebSiteName);
+        //    RandomFillingOfBlocks = new string[NumberOfBlocks];
+        //}
 
          
 

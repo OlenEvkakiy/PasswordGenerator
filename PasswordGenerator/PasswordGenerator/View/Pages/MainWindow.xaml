@@ -10,64 +10,64 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    
+
     <Window.DataContext>
-        <vm:MainPageViewModel/>
+        <vm:MainPageViewModel />
     </Window.DataContext>
-    
+
     <StackPanel>
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
-            Text="Введите название сайта"
-            />
+            Text="Введите название сайта" />
         <TextBox
+            x:Name="WebSiteName"
             Width="250"
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center"
-            x:Name="WebSiteName"/>
+            TextAlignment="Center" />
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
             Text="Количесвто символов в блоке" />
         <TextBox
+            x:Name="KeyLenght"
             Width="250"
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center"
-            x:Name="KeyLenght"/>
+            TextAlignment="Center" />
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
             Text="Количесвто блоков" />
         <TextBox
+            x:Name="NumberOfBlocks"
             Width="250"
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center"
-            x:Name="NumberOfBlocks"/>
+            TextAlignment="Center" />
         <Button
+            x:Name="Start"
             Width="100"
             Height="30"
             Background="#f0f0f0"
+            Click="Button_Click"
             Content="Go"
             FontSize="15"
-            FontWeight="Bold" Click="Button_Click" 
-            x:Name="Start"/>
+            FontWeight="Bold" />
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
             FontWeight="Bold"
             Text="Результат:" />
         <TextBlock
+            x:Name="Result"
             HorizontalAlignment="Center"
             FontSize="25"
-            Text="Bla"
-            x:Name="Result"/>
+            Text="Bla" />
         <TextBlock
             HorizontalAlignment="Left"
             FontSize="15"
