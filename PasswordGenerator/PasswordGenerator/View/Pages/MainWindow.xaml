@@ -5,21 +5,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:PasswordGenerator"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:PasswordGenerator.ViewModel"
     Title="MainWindow"
     Width="800"
     Height="450"
     mc:Ignorable="d">
+    
+    <Window.DataContext>
+        <vm:MainPageViewModel/>
+    </Window.DataContext>
+    
     <StackPanel>
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
-            Text="Введите название сайта" />
+            Text="Введите название сайта"
+            />
         <TextBox
             Width="250"
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center" />
+            TextAlignment="Center"
+            x:Name="WebSiteName"/>
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
@@ -29,7 +37,8 @@
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center" />
+            TextAlignment="Center"
+            x:Name="KeyLenght"/>
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
@@ -39,14 +48,16 @@
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center" />
+            TextAlignment="Center"
+            x:Name="NumberOfBlocks"/>
         <Button
             Width="100"
             Height="30"
             Background="#f0f0f0"
             Content="Go"
             FontSize="15"
-            FontWeight="Bold" />
+            FontWeight="Bold" Click="Button_Click" 
+            x:Name="Start"/>
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
@@ -55,7 +66,8 @@
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
-            Text="Bla" />
+            Text="Bla"
+            x:Name="Result"/>
         <TextBlock
             HorizontalAlignment="Left"
             FontSize="15"

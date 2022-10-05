@@ -12,8 +12,11 @@ namespace PasswordGenerator.Model
         ChangeWebSiteName changeWebSiteName = new ChangeWebSiteName();
         string [] RandomFillingOfBlocks;
         int KeyLenght;
+        string bufferOne;
+        string bufferTwo;
         int NumberOfBlocks;
         string WebSiteName;
+        string GeneratorOutput;
         string iPass = "";
         string[] arr = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "B",
                             "C", "D", "F", "G", "H", "J", "K", "L", "M", "N",
@@ -22,13 +25,18 @@ namespace PasswordGenerator.Model
                             "q", "r", "s", "t", "v", "w", "x", "z", "A", "E",
                             "U", "Y", "a", "e", "i", "o", "u", "y" };
 
-        
+        public void MethodCaller()
+        {
+            
+        }
 
-        string[] BAZA()
+        string BAZA()
         {
             WebSiteName = changeWebSiteName.Converter(WebSiteName);
             RandomFillingOfBlocks = new string[NumberOfBlocks];
         }
+
+         
 
         void NameBlender()
         {
@@ -53,8 +61,11 @@ namespace PasswordGenerator.Model
 
             for (int i = 0; i < RandomFillingOfBlocks.Length; i++)
             {
-                Console.Write(RandomFillingOfBlocks[i]);
+                bufferOne = RandomFillingOfBlocks[i];
+                bufferTwo = bufferTwo + bufferOne;
+
             }
+
         }
 
 
