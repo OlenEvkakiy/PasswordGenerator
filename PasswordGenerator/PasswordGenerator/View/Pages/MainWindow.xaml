@@ -30,7 +30,7 @@
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
-            Text="Количесвто символов в блоке" />
+            Text="Количество символов в блоке" />
         <TextBox
             x:Name="KeyLenght"
             Width="250"
