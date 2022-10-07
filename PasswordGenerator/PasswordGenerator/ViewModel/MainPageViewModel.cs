@@ -10,7 +10,7 @@ namespace PasswordGenerator.ViewModel
 
     public class MainPageViewModel : BaseViewModel
     {
-        Generator generatorModel = new();
+        Generator generatorModel = new Generator();
 
         private string _webSiteName;
         public string WebSiteName { get => _webSiteName; set => Set(ref _webSiteName, value); }
@@ -24,7 +24,10 @@ namespace PasswordGenerator.ViewModel
         private string _result;
         public string Result { get => _result; set => Set(ref _result, value); }
 
-        generatorModel.
+       public void Shit()
+        {
+            generatorModel.MethodCaller();
+        }
 
 
 

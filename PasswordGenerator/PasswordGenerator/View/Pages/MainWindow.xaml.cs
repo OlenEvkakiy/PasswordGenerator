@@ -1,4 +1,5 @@
 ﻿using PasswordGenerator.Model;
+using PasswordGenerator.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,8 @@ namespace PasswordGenerator
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {   
-        Generator GeneratorModel= new Generator();
-
+    {
+        MainPageViewModel viewModel = new();
 
         public MainWindow()
         {
@@ -31,6 +31,7 @@ namespace PasswordGenerator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            viewModel.Shit();
         }
     }
 }
