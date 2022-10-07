@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PasswordGenerator.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace PasswordGenerator.Model
 {
     public class Generator
     {
-
+        MainPageViewModel mainPageViewModel= new MainPageViewModel();
         ChangeWebSiteName changeWebSiteName = new ChangeWebSiteName();
         string [] RandomFillingOfBlocks;
         int KeyLenght;
@@ -16,7 +17,7 @@ namespace PasswordGenerator.Model
         string bufferTwo;
         int NumberOfBlocks;
         string WebSiteName;
-        string GeneratorOutput;
+        //string GeneratorOutput;
         string iPass = "";
         string[] arr = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "B",
                             "C", "D", "F", "G", "H", "J", "K", "L", "M", "N",
@@ -27,16 +28,21 @@ namespace PasswordGenerator.Model
 
         public void MethodCaller()
         {
-            
+            GetWebSiteName();
+            GetKeyLenght();
+            GetBlocksLenght();
+            GeneratePass();
+            NameBlender();
+            OutputValueBlender();
         }
 
         //string BAZA()
         //{
-        //    WebSiteName = changeWebSiteName.Converter(WebSiteName);
+        //    
         //    RandomFillingOfBlocks = new string[NumberOfBlocks];
         //}
 
-         
+
 
         void NameBlender()
         {
@@ -65,28 +71,27 @@ namespace PasswordGenerator.Model
                 bufferTwo = bufferTwo + bufferOne;
 
             }
-
+            mainPageViewModel.Result = bufferTwo;
         }
 
 
         //получаем название сайта
         void GetWebSiteName()
         {
-            Console.WriteLine("Введите назвение Website'а ");
-            WebSiteName = Console.ReadLine();
-
+            
+            WebSiteName = mainPageViewModel.WebSiteName;
+            WebSiteName = changeWebSiteName.Converter(WebSiteName);
         }
 
         void GetKeyLenght()
         {
-            Console.WriteLine("Введите необходимое колличество символов вашего пароля");
-            KeyLenght = Convert.ToInt32(Console.ReadLine());
+           
+            KeyLenght = Convert.ToInt32(mainPageViewModel.KeyLenght);
         }
 
         void GetBlocksLenght()
         {
-            Console.WriteLine("Введите необходимое колличество блоков вашего пароля");
-            NumberOfBlocks = Convert.ToInt32(Console.ReadLine());
+            NumberOfBlocks = Convert.ToInt32(mainPageViewModel.NumberOfBlocks);
         }
 
 
