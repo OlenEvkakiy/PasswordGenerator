@@ -21,7 +21,7 @@ namespace PasswordGenerator.Model
         private string _result;
         public string Result { get => _result; set => Set(ref _result, value); }
 
-        MainPageViewModel mainPageViewModel= new MainPageViewModel();
+       // MainPageViewModel mainPageViewModel= new MainPageViewModel();
         ChangeWebSiteName changeWebSiteName = new ChangeWebSiteName();
         string [] RandomFillingOfBlocks;
         //int KeyLenght;
@@ -83,7 +83,7 @@ namespace PasswordGenerator.Model
                 bufferTwo = bufferTwo + bufferOne;
 
             }
-            mainPageViewModel.Result = bufferTwo;
+            Result = bufferTwo;
         }
 
 
@@ -91,19 +91,19 @@ namespace PasswordGenerator.Model
         void GetWebSiteName()
         {
             
-            WebSiteName = mainPageViewModel.WebSiteName;
+            WebSiteName = WebSiteName;
             WebSiteName = changeWebSiteName.Converter(WebSiteName);
         }
 
         void GetKeyLenght()
         {
            
-            KeyLenght = Convert.ToInt32(mainPageViewModel.KeyLenght);
+            KeyLenght = Convert.ToInt32(KeyLenght);
         }
 
         void GetBlocksLenght()
         {
-            NumberOfBlocks = Convert.ToInt32(mainPageViewModel.NumberOfBlocks);
+            NumberOfBlocks = Convert.ToInt32(NumberOfBlocks);
         }
 
 
