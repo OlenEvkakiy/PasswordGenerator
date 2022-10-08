@@ -7,16 +7,28 @@ using System.Threading.Tasks;
 
 namespace PasswordGenerator.Model
 {
-    public class Generator
+    public class Generator:BaseViewModel
     {
+        private string _webSiteName;
+        public string WebSiteName { get => _webSiteName; set => Set(ref _webSiteName, value); }
+
+        private int _keyLenght;
+        public int KeyLenght { get => _keyLenght; set => Set(ref _keyLenght, value); }
+
+        private int _numberOfBlocks;
+        public int NumberOfBlocks { get => _numberOfBlocks; set => Set(ref _numberOfBlocks, value); }
+
+        private string _result;
+        public string Result { get => _result; set => Set(ref _result, value); }
+
         MainPageViewModel mainPageViewModel= new MainPageViewModel();
         ChangeWebSiteName changeWebSiteName = new ChangeWebSiteName();
         string [] RandomFillingOfBlocks;
-        int KeyLenght;
+        //int KeyLenght;
         string bufferOne;
         string bufferTwo;
-        int NumberOfBlocks;
-        string WebSiteName;
+        //int NumberOfBlocks;
+        //string WebSiteName;
         //string GeneratorOutput;
         string iPass = "";
         string[] arr = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "B",
