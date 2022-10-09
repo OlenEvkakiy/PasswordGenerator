@@ -26,8 +26,8 @@
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center"
-            Text="{Binding WebSiteName}" />
+            Text="{Binding WebSiteName}"
+            TextAlignment="Center" />
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
@@ -38,9 +38,9 @@
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center"
-            Text="{Binding KeyLenght}"/>
-        
+            Text="{Binding KeyLenght}"
+            TextAlignment="Center" />
+
         <TextBlock
             HorizontalAlignment="Center"
             FontSize="25"
@@ -51,14 +51,14 @@
             Height="25"
             HorizontalAlignment="Center"
             FontSize="15"
-            TextAlignment="Center"
-            Text="{Binding NumberOfBlocks}"/>
+            Text="{Binding NumberOfBlocks}"
+            TextAlignment="Center" />
         <Button
             x:Name="Start"
             Width="100"
             Height="30"
             Background="#f0f0f0"
-            Click="Button_Click"
+            Click="Start_Click"
             Content="Go"
             FontSize="15"
             FontWeight="Bold" />
@@ -71,8 +71,9 @@
             x:Name="Result"
             HorizontalAlignment="Center"
             FontSize="25"
-            Text="{Binding Result}"/>
-        
+            Foreground="Red"
+            Text="{Binding Result}" />
+
         <TextBlock
             HorizontalAlignment="Left"
             FontSize="15"

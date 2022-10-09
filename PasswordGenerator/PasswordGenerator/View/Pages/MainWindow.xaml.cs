@@ -22,16 +22,15 @@ namespace PasswordGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainPageViewModel viewModel = new();
-
+        Generator generatorModel = new();
         public MainWindow()
         {
             InitializeComponent();
-        }
+        }       
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Start_Click(object sender, RoutedEventArgs e)
         {
-            //viewModel.Shit();
+            generatorModel.MethodCaller();
         }
     }
 }

@@ -56,6 +56,7 @@ namespace PasswordGenerator.ViewModel
             }
         }
 
+
         //public void Shit<T>(T field, T value)
         //{
         //    if (Equals(field, value))

@@ -9,13 +9,13 @@ namespace PasswordGenerator.Model
 {
     public class Generator:BaseViewModel
     {
-        private string _webSiteName;
+        private string _webSiteName = "lol";
         public string WebSiteName { get => _webSiteName; set => Set(ref _webSiteName, value); }
 
-        private int _keyLenght;
+        private int _keyLenght = 3;
         public int KeyLenght { get => _keyLenght; set => Set(ref _keyLenght, value); }
 
-        private int _numberOfBlocks;
+        private int _numberOfBlocks = 3;
         public int NumberOfBlocks { get => _numberOfBlocks; set => Set(ref _numberOfBlocks, value); }
 
         private string _result;
@@ -104,6 +104,8 @@ namespace PasswordGenerator.Model
         void GetBlocksLenght()
         {
             NumberOfBlocks = Convert.ToInt32(NumberOfBlocks);
+            RandomFillingOfBlocks = new string[NumberOfBlocks];
+
         }
 
 
