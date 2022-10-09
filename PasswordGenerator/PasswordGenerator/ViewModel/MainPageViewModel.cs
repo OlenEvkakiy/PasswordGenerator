@@ -16,29 +16,66 @@ namespace PasswordGenerator.ViewModel
         public string WebSiteName
         {
             get => generatorModel.WebSiteName;
-            set 
-            { 
+            set
+            {
                 Set(ref _webSiteName, value);
-                WebSiteName = _webSiteName; 
+                generatorModel.WebSiteName = _webSiteName;
             }
         }
 
         private int _keyLenght;
-        public int KeyLenght { get => generatorModel.KeyLenght; set => Set(ref _keyLenght, value); }
+        public int KeyLenght
+        {
+            get => generatorModel.KeyLenght;
+            set
+            {
+                Set(ref _keyLenght, value);
+                generatorModel.KeyLenght = _keyLenght;
+            }
+        }
 
         private int _numberOfBlocks;
-        public int NumberOfBlocks { get => generatorModel.NumberOfBlocks; set => Set(ref _numberOfBlocks, value); }
+        public int NumberOfBlocks
+        {
+            get => generatorModel.NumberOfBlocks;
+            set
+            {
+                Set(ref _numberOfBlocks, value);
+                generatorModel.NumberOfBlocks = _numberOfBlocks;
+            }
+        }
 
         private string _result;
-        public string Result { get => generatorModel.Result; set => Set(ref _result, value); }
-
-        public void Shit()
+        public string Result
         {
-            WebSiteName = _webSiteName;
-            KeyLenght = _keyLenght;
-            NumberOfBlocks = _numberOfBlocks;
-            Result = _result;
-        }     
+            get => generatorModel.Result;
+            set
+            {
+                Set(ref _result, value);
+                generatorModel.Result = _result;
+            }
+        }
 
+        //public void Shit<T>(T field, T value)
+        //{
+        //    if (Equals(field, value))
+        //    {
+        //        return;
+        //    }
+        //    //field = value;
+        //    Equals(field);
+        //}
+
+        //public override bool Equals(object obj)
+        //{
+        //    if (obj != null)
+        //    {
+        //        return generatorModel.WebSiteName == _webSiteName
+        //            && generatorModel.KeyLenght == _keyLenght
+        //            && generatorModel.NumberOfBlocks == _numberOfBlocks
+        //            && generatorModel.Result == _result;
+        //    }
+        //    return false;
+        //}
     }
 }
